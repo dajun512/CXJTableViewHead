@@ -261,7 +261,7 @@ static NSString *const _TableViewCellReuseID = @"_TableViewReuseID";
     if ((!self.isShowHeaderView && offset.y <= -halfTop) || (self.isShowHeaderView && offset.y < -halfTop)) {
         inset.top = headerViewH;
         self.tableView.contentInset = inset;
-        targetContentOffset->x = offset.x;
+        //targetContentOffset->x = offset.x;
         targetContentOffset->y = -(headerViewH+areaTop);
         self.showHeaderView = YES;
         return;
@@ -270,7 +270,7 @@ static NSString *const _TableViewCellReuseID = @"_TableViewReuseID";
     if ((self.isShowHeaderView && offset.y >= -halfTop) || (!self.isShowHeaderView && offset.y > -halfTop)) {
         inset.top = 0;
         self.tableView.contentInset = inset;
-        targetContentOffset->x = offset.x;
+        //targetContentOffset->x = offset.x;
         targetContentOffset->y = -areaTop;
         self.showHeaderView = NO;
     }
